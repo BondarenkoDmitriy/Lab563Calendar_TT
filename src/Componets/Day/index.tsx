@@ -24,7 +24,7 @@ const Day: React.FC<DayProps> = ({ dayNumber }) => {
 
   return (
     <div className="full" onClick={makeTask}>
-      {dayNumber}
+      <div className="dayNumber">{dayNumber}</div>
       {isTasked && <Input onKeyDownHandler={onKeyDownHandler} />}
       {tasks && tasks.map((task) => <Task task={task}/>)}
     </div>
