@@ -20,11 +20,19 @@
   padding: 1vw;
   
   height: 15vh;
+  aspect-ratio: 1;
+
+  overflow-y: auto;
+  word-wrap: break-word;
+
   flex: 1;
+
+  background-color: #80808069;
 
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 .empty-cell {
+  background-color: #80808036;
 }

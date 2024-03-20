@@ -2,7 +2,7 @@
 import React from 'react';
 import DaysOfWeek from '../DaysOfWeek/DaysOfWeek';
 import './calendarGrid.scss';
-import Day from '../Day/Day';
+import Day from '../Day';
 
 interface CalendarGridProps {
   currentMonthName: string;

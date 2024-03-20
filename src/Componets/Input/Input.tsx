@@ -1,24 +1,20 @@
 import React from 'react';
 
 interface SetTaskProps {
-  setTask: (value: string) => void;
+  onKeyDownHandler: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 }
 
-const Input: React.FC<SetTaskProps> = ({ setTask }) => {
-  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === 'Enter') {
-      const value = event.target?.value;
-
-      setTask(value);
-    }
-  };
-
+const Input: React.FC<SetTaskProps> = ({
+  onKeyDownHandler,
+}) => {
   return (
-    <div>
+    <div
+      onClick={e => e.stopPropagation()}
+    >
       <input
         type="text"
-        onKeyPress={handleKeyPress}
         placeholder="Enter task..."
+        onKeyDown={onKeyDownHandler}
       />
     </div>
   );
